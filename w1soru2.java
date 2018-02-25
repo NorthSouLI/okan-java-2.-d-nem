@@ -1,4 +1,4 @@
-package ödev;
+package Ã¶dev;
 
 import java.util.Scanner;
 
@@ -12,7 +12,7 @@ public class soru2 {
 		
 		double m,km,hm,dam,f,dm,cm,mm;
 		
-		System.out.println("Metre Deðerini giriniz :");
+		System.out.println("Metre DeÃ°erini giriniz :");
 		m=giris.nextDouble();
 		dam=m/10;
 		hm=m/100;
