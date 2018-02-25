@@ -1,4 +1,4 @@
-package ödev;
+package Ã¶dev;
 
 import java.util.Scanner;
 
