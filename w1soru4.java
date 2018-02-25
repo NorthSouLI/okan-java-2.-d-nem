@@ -1,4 +1,4 @@
-package ödev;
+package Ã¶dev;
 
 import java.util.Scanner;
 
@@ -10,11 +10,11 @@ public class soru4 {
 		Scanner giris=new Scanner(System.in);
 		
 		int r,h;
-		double ç,a,hacim;
+		double Ã§,a,hacim;
 		
-		System.out.println("Yarýçap deðerini giriniz :");
+		System.out.println("YarÃ½Ã§ap deÃ°erini giriniz :");
 		r=giris.nextInt();
-		System.out.println("Yüksekliði giriniz :");
+		System.out.println("YÃ¼ksekliÃ°i giriniz :");
 		h=giris.nextInt();
 		
 		a=2*Math.PI*r*(r+h);
