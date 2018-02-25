@@ -1,4 +1,4 @@
-package ödev2;
+package Ã¶dev2;
 
 import java.util.Scanner;
 
@@ -8,7 +8,7 @@ public class soru1 {
 		// TODO Auto-generated method stub
 
 		Scanner giris=new Scanner(System.in);
-        int yas,buyukyas =0,buyukyasort=0,kýrkustuort=0,kýrkaltýort=0,kucukyasort=0,kucukyas =0,maas,limit,maasort=0,yasort=0,yastoplam=0,maastoplam=0;
+        int yas,buyukyas =0,buyukyasort=0,kÃ½rkustuort=0,kÃ½rkaltÃ½ort=0,kucukyasort=0,kucukyas =0,maas,limit,maasort=0,yasort=0,yastoplam=0,maastoplam=0;
         System.out.print("Kac kisi giriceksiniz =");
         limit=giris.nextInt();
         Byte s;
@@ -25,24 +25,24 @@ public class soru1 {
 		if (yas<=39){
 		 kucukyas+=yas;  
 		 kucukyasort=kucukyas/yas;
-		 kýrkaltýort=kucukyas/kucukyasort;
+		 kÃ½rkaltÃ½ort=kucukyas/kucukyasort;
 		 } else {
 		 
 		 buyukyas+=yas;
 		 buyukyasort=buyukyas/yas;
-		 kýrkustuort=buyukyas/buyukyasort;
+		 kÃ½rkustuort=buyukyas/buyukyasort;
  	}
  	}
  	System.out.println("Yas ortalamasi :"+yasort);
  	System.out.println("Maas ortalamasi :"+maasort);
  	System.out.println("Yas toplami :"+yastoplam);
  	System.out.println("Maas toplami :"+maastoplam);
- 	System.out.println("40 yas ustu toplamý :"+buyukyas);
- 	System.out.println("40 yas altý toplamý :"+kucukyas);
+ 	System.out.println("40 yas ustu toplamÃ½ :"+buyukyas);
+ 	System.out.println("40 yas altÃ½ toplamÃ½ :"+kucukyas);
  	System.out.println("40 yas ustu kisi sayisi :"+buyukyasort);
- 	System.out.println("40 yas altý kisi sayisi :"+kucukyasort);
- 	System.out.println("40 yas altý ortalama :"+kýrkaltýort);
- 	System.out.println("40 yas ustu ortalama :"+kýrkustuort);
+ 	System.out.println("40 yas altÃ½ kisi sayisi :"+kucukyasort);
+ 	System.out.println("40 yas altÃ½ ortalama :"+kÃ½rkaltÃ½ort);
+ 	System.out.println("40 yas ustu ortalama :"+kÃ½rkustuort);
 	}
 
 }
