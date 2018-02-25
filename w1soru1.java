@@ -1,4 +1,4 @@
-package ödev;
+package Ã¶dev;
 
 import java.util.Scanner;
 
@@ -12,15 +12,15 @@ public class soru1 {
 		
 		double f,t,y,u,a, b , c , d, e;
 		
-		System.out.println("A deðerini giriniz :");
+		System.out.println("A deÄŸerini giriniz :");
 		a= giris.nextDouble();
-		System.out.println("B deðerini giriniz :");
+		System.out.println("B deÄŸerini giriniz :");
 		b= giris.nextDouble();
-		System.out.println("C deðerini giriniz :");
+		System.out.println("C deÄŸerini giriniz :");
 		c= giris.nextDouble();
-		System.out.println("D deðerini giriniz :");
+		System.out.println("D deÄŸerini giriniz :");
 		d= giris.nextDouble();
-		System.out.println("E deðerini giriniz :");
+		System.out.println("E deÄŸerini giriniz :");
 		e= giris.nextDouble();
 		
 		
