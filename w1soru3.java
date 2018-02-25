@@ -1,4 +1,4 @@
-package ödev;
+package Ã¶dev;
 
 import java.util.Scanner;
 
@@ -10,17 +10,17 @@ public class soru3 {
 		Scanner giris=new Scanner(System.in);
 		
 		
-		int k,h,a,ç;
-		System.out.println("1 Kenar uzunluðunu giriniz :");
+		int k,h,a,Ã§;
+		System.out.println("1 Kenar uzunluÃ°unu giriniz :");
 		k=giris.nextInt();
 		
 		a=6*(k*k);
 		h=k*k*k;
-		ç=k*12;
+		Ã§=k*12;
 		
 		System.out.println("Alan :"+a+
 				"\nHacim :"+h+
-				"\nÇevre :"+ç);
+				"\nÃ‡evre :"+Ã§);
 		
 		
 	}
