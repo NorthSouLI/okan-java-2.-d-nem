@@ -1,0 +1,93 @@
+package vize_hazırlık;
+
+import java.util.Scanner;
+
+public class arda {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner giris= new Scanner (System.in);
+		/*int toplam =0,t;
+		System.out.println("Kaç sayı gireceksiniz: ");
+		int d = giris.nextInt();	
+		for (int i =0;i<d;i++){	
+		System.out.println("Değer giriniz: ");
+		t= giris.nextInt();
+		toplam = toplam+ t;
+		}
+		double sonuc = toplam/d;
+		System.out.println("Toplam: "+toplam);
+		System.out.println("Sonuç :"+sonuc);*/
+		
+		 /*int sayi,adet=0;
+	        double toplam=0;
+	        System.out.println("En küçük short değer: "+Short.MIN_VALUE);
+	        System.out.println("En büyük short değer :"+ Short.MAX_VALUE);
+	        do{
+	          
+	        System.out.print("Bir Sayı Girin: ");
+	        sayi = giris.nextInt();
+	        toplam+=sayi;
+	        adet++;
+	        }while(sayi != 0);
+	 
+	        System.out.println("Sayıların Toplamı: " + toplam);
+	        System.out.println("Sayıların ortalaması: "+toplam/adet);*/
+	        
+		
+		
+		
+		/*short sayi,eb = 0,ek = 0;
+        
+        System.out.println("En küçük short değer: "+Short.MIN_VALUE);
+        System.out.println("En büyük short değer :"+ Short.MAX_VALUE);
+        do{
+          
+        System.out.print("Bir Sayı Girin: ");
+        sayi = giris.nextShort();
+        if (sayi ==0) break;
+        if (sayi>eb) eb= (short)sayi;
+        if (sayi<ek) ek= (short)sayi;
+        }while(sayi != 0);
+ 
+        System.out.println("Sayıların En Büyüğü : "+eb);
+        System.out.println("Sayıların En Küçüğü : "+ek);*/
+	     
+		
+		int d,ttop=0,çtop=0,tadet=0,çadet=0,toplam=0,sayi;
+		System.out.println("Kaç değer gireceksiniz: ");
+		int limit=giris.nextInt();
+		short eb = Short.MIN_VALUE;
+		short ek = Short.MAX_VALUE;
+		for (int i=0;i<limit;i++){
+			System.out.println("Bir değer giriniz: ");
+			sayi= giris.nextInt();
+			toplam+=sayi;
+			
+			do {
+			if (sayi==0) break;
+			if (sayi<eb) eb = (short)sayi;
+			if (sayi>ek) ek = (short)sayi;
+			}
+			if (sayi %2==0){
+				çtop+=sayi;
+				çadet++;
+			}
+			else {
+				ttop+=sayi;
+				tadet++;
+			}
+			
+		}
+		
+		System.out.println("Tüm sayıların toplamı: "+toplam);
+		System.out.println("Tüm sayıların ortalaması: "+(toplam/limit));
+		System.out.println("Tek sayıların toplamı: "+ttop);
+		System.out.println("Tek sayıların ortalaması: "+(ttop/tadet));
+		System.out.println("Çift Sayıların toplamı: "+çtop);
+		System.out.println("Çift sayıların ortalaması: "+(çtop/çadet));		
+	}
+
+
+}
