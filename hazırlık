@@ -1,0 +1,144 @@
+package final_hazirlik;
+
+import java.util.Scanner;
+
+public class örnek1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner giris=new Scanner(System.in);
+		int eboytop =0,boyort=0,eyaştop=0,eboyadet = 0,eyaşadet = 0,boytop=0,yaştop=0,yaşort=0,eboyort=0,eyaşort=0;
+		System.out.println("Kaç kişi gireceksiniz: ");
+		int ks =giris.nextInt();
+		String [] ad = new String [ks];
+		String [] eğitim = new String [ks];
+		String [] cinsiyet = new String [ks];
+		int [] boy = new int [ks];
+		int [] yaş = new int [ks];
+		
+		for (int i =0;i<ks;i++) {
+			System.out.println("Adınızı giriniz: ");
+			ad [i] =giris.next();
+			System.out.println("Cinsiyetinizi giriniz: ");
+			cinsiyet [i] =giris.next();
+			System.out.println("Yaşınızı giriniz: ");
+			yaş [i] =giris.nextInt();
+			System.out.println("Boyunuzu giriniz: ");
+			boy [i] =giris.nextInt();
+			System.out.println("Eğitim durumunuzu giriniz: ");
+			eğitim [i] = giris.next();
+			
+		}
+		for (;;) {
+			menuYap(ks);
+			int menu =giris.nextInt();
+			switch (menu) {
+			case 1: Listeleme (ad,cinsiyet,yaş,boy,eğitim,ks);
+			break;
+			case 2: System.out.println("Aradığınız adı giriniz: ");
+				String arananad=giris.next();
+				İsimİleArama(ad,cinsiyet,yaş,boy,eğitim,ks,arananad);
+			break;
+			case 3: ErkekBoyYaşOrtalaması(cinsiyet,eboyadet,eyaşadet,ks,eyaşadet,eboyadet,boytop,yaştop,yaş,boy,eboyort,eyaşort);
+			break;
+			case 4: BoyYaşOrtalaması(ks,yaş,boy,yaştop,boytop,boyort,yaşort);
+			break;
+			case 5: BoyuOrtalamadanBüyükBilgisi();
+			break;
+			case 6: YaşıOrtalamadanKüçükBilgisi();
+			break;
+			case 7: LiseÜstüEğitimAlanlarBilgisi ();
+			break;
+			case 8: Çıkış();
+			System.exit(0);
+			break;
+			default:
+			System.out.println("Yanlış Seçim");
+			}
+		}
+		
+		
+	}
+
+	private static void menuYap(int ks) {
+		// TODO Auto-generated method stub
+			System.out.println("Seçiminizi Yapınız: \n1-Listeleme\n2-İsimİleArama\n3-ErkekBoyYaşOrtalaması"
+					+ "\n4-BoyYaşOrtalaması\n5-BoyuOrtalamadanBüyüklerinBilgisi\n6-YaşıOrtalamadanKüçüklerinBilgisi"
+					+ "\n7-LiseÜstüEğitimAlanlarınBilgisi\n8-Çıkış");
+			
+	
+	}
+	private static void Listeleme(String[] ad, String[] cinsiyet, int[] yaş, int[] boy, String[] eğitim, int ks) {
+		// TODO Auto-generated method stub
+		for (int i=0;i<ks;i++) {
+			System.out.println(ad[i]+"\n"+cinsiyet[i]+"\n"+yaş[i]+"\n"+boy[i]+"\n"+eğitim);
+		}
+		}
+	
+
+	private static void İsimİleArama(String[] ad, String[] cinsiyet, int[] yaş, int[] boy, String[] eğitim, int ks,
+			String arananad) {
+		// TODO Auto-generated method stub
+		for(int i=0;i<ks;i++) {
+			if(arananad.equalsIgnoreCase(ad[i])) {	
+			
+				System.out.println("Kişinin Bilgileri: ");
+				System.out.println("Adı: "+ad[i]);
+				System.out.println("Cinsiyeti: "+cinsiyet[i]);
+				System.out.println("Yaşı: "+yaş[i]);
+				System.out.println("Boyu: "+boy[i]);
+				System.out.println("Eğitim Durumu: "+eğitim[i]);
+			}
+			}
+	}
+
+	private static void ErkekBoyYaşOrtalaması(String[] cinsiyet, int eboytop, int eyaştop, int ks, int eyaşadet, int eboyadet, int boytop, int yaştop, int[] yaş, int[] boy, int eboyort, int eyaşort) {
+		// TODO Auto-generated method stub
+		for (int i=0;i<ks;i++) {
+			
+			if (cinsiyet[i]=="erkek") {		
+				eboytop=eboytop+boy[i];
+				eyaştop=eyaştop+yaş[i];
+				eboyadet++;
+				eyaşadet++;
+				
+			}
+		}
+		System.out.println("Erkek Boy Ortalaması: "+(eboytop/eboyadet));
+		System.out.println("Erkek Yaş Ortalaması: "+(eyaştop/eyaşadet));
+	}
+
+	private static void BoyYaşOrtalaması(int ks, int[] yaş, int[] boy, int yaştop, int boytop, int boyort, int yaşort) {
+		// TODO Auto-generated method stub
+		
+		for(int i=0;i<ks;i++) {
+			boytop=boytop+boy[i];
+			yaştop=yaştop+yaş[i];
+			
+		}
+		System.out.println("Yaş Ortalaması: "+yaştop/ks);
+		System.out.println("Boy Ortalaması: "+boytop/ks);
+	}
+
+	private static void BoyuOrtalamadanBüyükBilgisi() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private static void YaşıOrtalamadanKüçükBilgisi() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private static void LiseÜstüEğitimAlanlarBilgisi() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private static void Çıkış() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
